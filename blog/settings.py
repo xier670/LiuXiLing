@@ -25,7 +25,7 @@ SECRET_KEY = '3*6^b923glm)#wltb_y872oc=x%jj&8*h!v_875*8j=b&qa!u&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True默认
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -101,7 +101,7 @@ DATABASES = {
 }
 
 
-SECRET_KEY='abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+#SECRET_KEY='abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -142,8 +142,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static').replace('\\','/'),
 ]
+STATIC_ROOT = "static"# 媒体文件收集
 
-# 媒体文件收集
 MEDIA_URL = "/media/"   # 媒体文件别名(相对路径) 和 绝对路径
 MEDIA_ROOT = (
     os.path.join(BASE_DIR, 'media')
